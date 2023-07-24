@@ -39,6 +39,8 @@ public class MyController {
 		if(username.equals("admin") && password.equals("admin")) return "success";
 		return "error";
 	}
+	
+	
 }
 
 
