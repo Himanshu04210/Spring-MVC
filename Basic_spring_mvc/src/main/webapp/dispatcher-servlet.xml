@@ -10,7 +10,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
      
      <bean id="vr" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
      		<property name="prefix" value="WEB-INF/jsp-files/" />
-     		<property name="suffix" value=".jsp"/>
+     		<property name="suffix" value=".Jsp"/>
 		     
      </bean>
      
