@@ -4,15 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home page</title>
+<title>Controller 2</title>
 </head>
 <body>
-	<h1>Welcome to spring mvc</h1>
-	
-	
-	<a href="hello1">Checkout first Controller</a>
-	<span>|</span>
-	<a href="hello2">Checkout second Controller</a>
-	
+
+	<h1>Welcome to Controller 2</h1>
+
 </body>
 </html>

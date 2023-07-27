@@ -11,4 +11,10 @@ public class FirstController {
 		return "index";
 	}
 	
+	
+	@GetMapping("/hello1")
+	public String hello1Handler() {
+		return "controller1";
+	}
+	
 }	
