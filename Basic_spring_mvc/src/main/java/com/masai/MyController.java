@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MyController {
 	
-	@GetMapping("/home")
+	@GetMapping("/")
 	public String indexPage() {
 		return "index";
 		

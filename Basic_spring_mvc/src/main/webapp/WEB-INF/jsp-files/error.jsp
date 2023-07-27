@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Error page</title>
 </head>
 <body bgcolor="cyan">
-	<a href="loginPage">Username or Password, something went wrong. Try Again</a>
+	<p>Something went wrong</p>
+	
+	<jsp:include page="/WEB-INF/jsp-files/login.jsp"></jsp:include>
 </body>
 </html>
