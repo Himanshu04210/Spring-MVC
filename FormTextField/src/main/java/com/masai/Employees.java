@@ -1,12 +1,18 @@
 package com.masai;
 
 public class Employees {
-	
+	//@Nonnull
 	private String name;
 	private String address;
 	private String department;
+	private String gender;
 	
-	
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	public String getName() {
 		return name;
 	}

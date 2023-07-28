@@ -7,6 +7,7 @@
 <title>Home page</title>
 </head>
 <body>
-	<h1>Welcome to JSP</h1>
+	<h1>Welcome to Spring MVC</h1>
+	<a href="Form">Click here for filling the form</a>
 </body>
 </html>
