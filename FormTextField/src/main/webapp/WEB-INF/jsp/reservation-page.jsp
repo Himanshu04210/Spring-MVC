@@ -15,11 +15,11 @@
         Male<form:radiobutton path="Gender" value="Male"/>  
         Female<form:radiobutton path="Gender" value="Female"/>  
         <br><br>  
-        Meals:  
+        <%-- Meals:  
         BreakFast<form:checkbox path="Food" value="BreakFast"/>  
         Lunch<form:checkbox path="Food" value="Lunch"/>  
         Dinner<form:checkbox path="Food" value="Dinner"/>  
-        <br><br>  
+        <br><br>   --%>
         <input type="submit" value="Submit" />  
     </form:form>  
 </body>  

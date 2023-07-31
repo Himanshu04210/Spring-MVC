@@ -1,5 +1,8 @@
 package com.masai;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,8 +28,18 @@ public class ReservationController {
 	}  
     
 	@RequestMapping("/submitForm")  
-	public String submitForm(@ModelAttribute("reservation") Reservation res)  
+	public String submitForm(Model model)  
 	{  
-	    return "confirmation-page";  
+	   
+		Reservation r1 = new Reservation("Rahul", "Kumar", "Male");
+		
+		Reservation r2 = new Reservation("Priti", "Tiwari", "Female");
+		Reservation r3 = new Reservation("Aman", "astel", "Male");
+		
+		List<Reservation> list = Arrays.asList(r1, r2, r3);
+		
+		model.addAllAttributes(list);
+		
+		return "confirmation-page";  
 	}  
 }  

@@ -5,13 +5,24 @@ public class Reservation {
     private String firstName;  
     private String lastName;  
     private String Gender;  
-    private String[] Food;  
+//    private String[] Food;  
     
     public Reservation()  
     {         
     }  
     
-    public String getFirstName() {  
+    
+    
+    public Reservation(String firstName, String lastName, String gender) {
+	super();
+	this.firstName = firstName;
+	this.lastName = lastName;
+	Gender = gender;
+}
+
+
+
+	public String getFirstName() {  
         return firstName;  
     }  
     public void setFirstName(String firstName) {  
@@ -29,12 +40,12 @@ public class Reservation {
     public void setGender(String gender) {  
         Gender = gender;  
     }  
-    public String[] getFood() {  
-        return Food;  
-    }  
-    public void setFood(String[] food) {  
-        Food = food;  
-    }         
+//    public String[] getFood() {  
+//        return Food;  
+//    }  
+//    public void setFood(String[] food) {  
+//        Food = food;  
+//    }         
 }  
 	
 	
