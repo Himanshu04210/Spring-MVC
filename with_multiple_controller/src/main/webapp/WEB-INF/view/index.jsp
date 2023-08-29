@@ -10,7 +10,7 @@
 	<h1>Welcome to spring mvc</h1>
 	
 	
-	<a href="hello1">Checkout first Controller</a>
+	<a href="hello1">Checkout first Controller </a>
 	<span>|</span>
 	<a href="hello2">Checkout second Controller</a>
 	
