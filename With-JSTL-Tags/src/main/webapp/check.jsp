@@ -4,7 +4,7 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 
-<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
+ <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%> 
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -21,7 +21,8 @@
 	
 	<h2>Data base connected with the use of the JDBC</h2>
 	<%
-		/*String url = "jdbc:mysql://localhost:3306/db2";
+	/*
+		String url = "jdbc:mysql://localhost:3306/db2";
 		String username = "root";
 		String password = "root";
 		
@@ -30,10 +31,8 @@
 		
 		String query = "select * from employee";
 		PreparedStatement st = con.prepareStatement(query);
-		 String sql = "insert into employee (gender, name, salary) values (?, ?, ?)";
 		
-		
-		
+		String sql = "insert into employee (gender, name, salary) values (?, ?, ?)";
 		
 		st.setString(1, "female");
 		st.setString(2, "Aarju");
@@ -42,7 +41,7 @@
 		if(st.executeUpdate() >0) {
 			out.println("Employee Added <br>");
 		}
-		 
+		
 		 ResultSet rs = st.executeQuery();
 		
 		if(!rs.isBeforeFirst() && rs.getRow() == 0) out.println("No product in the database!!!!");
@@ -65,11 +64,13 @@
 	<sql:query var="rs" dataSource="${db }">select * from employee;</sql:query>
 	
 	<c:forEach items="${rs.rows }" var="emp">
+	
 	  Name : <c:out value="${emp.name }"></c:out><br>
 	  Gender : <c:out value="${emp.gender }"></c:out><br>
 	  Salary : <c:out value="${emp.salary }"></c:out><br><br>
+	  
 	</c:forEach>
-	
+	 
 	
 </body>
 </html>
