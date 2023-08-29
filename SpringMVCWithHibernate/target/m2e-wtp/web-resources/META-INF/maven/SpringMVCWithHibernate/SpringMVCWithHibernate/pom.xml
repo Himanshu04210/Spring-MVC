@@ -23,6 +23,7 @@
   <properties>
 	<maven.compiler.source>17</maven.compiler.source>
 	<maven.compiler.target>17</maven.compiler.target>
+	<hibernate.cfg.path>src/main/resources/hibernate.cfg.xml</hibernate.cfg.path>
   </properties>
   
   <dependencies>
@@ -31,7 +32,13 @@
 	    <artifactId>spring-webmvc</artifactId>
 	    <version>6.0.11</version>
 	</dependency>
-	
+	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <version>1.18.28</version>
+	    <scope>provided</scope>
+	</dependency>
+
 	
 	<dependency>
 	    <groupId>javax.servlet</groupId>
