@@ -6,10 +6,13 @@ import javax.persistence.TypedQuery;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Repository;
 
 import com.masai.Entity.Employees;
 import com.masai.Utils.SFUtils;
 
+
+@Repository
 public class EmployeeDaoImple implements EmployeeDao{
 
 	@Override
