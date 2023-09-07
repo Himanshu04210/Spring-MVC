@@ -28,6 +28,6 @@ public class Employees {
 	private int id;
 	
 	private String name;
-	private String email;
-	private String department;
+	private String salary;
+	private String address;
 }
