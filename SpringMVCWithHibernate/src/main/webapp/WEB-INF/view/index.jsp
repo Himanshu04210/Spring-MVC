@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Home page</title>
 </head>
 <body>
 	<h1>New Project start working</h1>
+	
+	<a href="employees">Checkout all the employees</a>
+	
 </body>
 </html>

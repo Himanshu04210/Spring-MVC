@@ -23,7 +23,7 @@
   <properties>
 	<maven.compiler.source>17</maven.compiler.source>
 	<maven.compiler.target>17</maven.compiler.target>
-	<hibernate.cfg.path>src/main/resources/hibernate.cfg.xml</hibernate.cfg.path>
+	<hibernate.cfg.path>src/main/resources/persistence.xml</hibernate.cfg.path>
   </properties>
   
   <dependencies>

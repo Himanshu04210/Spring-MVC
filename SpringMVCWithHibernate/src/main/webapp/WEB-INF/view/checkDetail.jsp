@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h1>All employee details</h1>
-	
+	All the data is :- ${employees}
 </body>
 </html>
