@@ -10,7 +10,6 @@
 </head>
 <body>
 	<h1>All employee details</h1>
-	All the data is :- 
 	
 	<%
 	   List<Employees> employees = (List<Employees>) request.getAttribute("employees");
