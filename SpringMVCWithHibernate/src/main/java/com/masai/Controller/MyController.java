@@ -20,14 +20,15 @@ public class MyController {
 	@GetMapping("/")
 	public String welcome() {
 		
+		/*
 		Employees employee = Employees.builder()
-				.name("Rahul")
-				.address("Delhi")
-				.salary("40000")
-				.build();
+								.name("Susheel")
+								.address("banki")
+								.salary("50000")
+								.build();
 		
 		employeeDao.registerEmployee(employee);
-		
+		*/
 		
 		return "index";
 	}
