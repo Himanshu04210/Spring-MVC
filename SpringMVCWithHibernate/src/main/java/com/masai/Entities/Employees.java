@@ -27,6 +27,10 @@ public class Employees {
 	private int id;
 	
 	private String name;
+	private String email;
+	
 	private String salary;
+	private String department;
 	private String address;
+	
 }
