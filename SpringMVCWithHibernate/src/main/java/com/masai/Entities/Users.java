@@ -20,7 +20,7 @@ import lombok.ToString;
 @Builder
 @Entity
 
-public class Employees {
+public class Users {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,9 +28,7 @@ public class Employees {
 	
 	private String name;
 	private String email;
-	
-	private String salary;
-	private String department;
+	private String designation;
 	private String address;
 	
 }

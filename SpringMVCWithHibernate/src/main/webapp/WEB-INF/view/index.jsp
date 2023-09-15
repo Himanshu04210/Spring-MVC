@@ -74,9 +74,9 @@
     <div id="navbar">
         <h1>Masai Vaccination</h1>
         <div>
-            <p><a href="register.jsp">Rigister</a></p>
-            <p><a href="Dashboard.jsp">Dashboard</a></p>
-            <p><a href="Vaccinated.jsp">Vaccinated</a></p>
+            <p><a href="register">Rigister</a></p>
+            <p><a href="Dashboard">Dashboard</a></p>
+            <p><a href="Vaccinated">Vaccinated</a></p>
         </div>
     </div>
     <div id="header">

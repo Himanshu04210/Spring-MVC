@@ -7,14 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.masai.Entities.Employees;
-import com.masai.Repository.EmployeeDao;
+import com.masai.Entities.Users;
+import com.masai.Repository.UserDao;
 
 @Controller
 public class MyController {
 
 	@Autowired
-	private EmployeeDao employeeDao;
+	private UserDao userDao;
 	
 	
 	@GetMapping("/")
@@ -33,10 +33,10 @@ public class MyController {
 		return "index";
 	}
 	
-	@GetMapping("/employees")
-	public String retriveAllEmployeeHandler(Model model) {
-		List<Employees> employees = employeeDao.getAllEmployees();
-		model.addAttribute("employees", employees);
+	@GetMapping("/users")
+	public String retriveAllUserHandler(Model model) {
+		List<Users> users = userDao.getAllUsers();
+		model.addAttribute("employees", users);
 		
 		
 		return "checkDetail";
@@ -44,10 +44,9 @@ public class MyController {
 	
 	
 	//@GetMapping("/register")
-	public String registerUserHandler(/*Model model, Employees employee*/) {
-//		employeeDao.registerEmployee(employee);
-//		model.addAttribute("employeeName", employee.getName());
-		System.out.println("register");
+	public String registerUserHandler(Model model) {
+		Users user = new Users();
+		model.addAttribute("user", user);
 		return "register";
 	}
 	
