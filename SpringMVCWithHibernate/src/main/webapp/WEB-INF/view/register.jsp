@@ -80,8 +80,8 @@
         }
 
         form {
-            width: 350px;
-            height: 65vh;
+            width: 340px;
+            height: 60vh;
             padding: 20px 30px;
             margin: 30px auto;
             box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
@@ -99,36 +99,34 @@
 <body>
 	
 	<div id="navbar">
-        <a href="./Index.html"><h1>Masai Vaccination</h1></a>
+        <a href=""><h1>Masai Vaccination</h1></a>
         <div>
-            <p><a href="./Register.html">Rigister</a></p>
-            <p><a href="./Dashboard.html">Dashboard</a></p>
-            <p><a href="./Vaccinated.html">Vaccinated</a></p>
+            <p><a href="register">Rigister</a></p>
+            <p><a href="Dashboard">Dashboard</a></p>
+            <p><a href="Vaccinated">Vaccinated</a></p>
         </div>
     </div>
-
+	<h1 id="heading">Fill your cridentials</h1>
 
 	<form:form action="registerEmployee" modelAttribute="user" method="POST">
 		
-		<label for="uniqueId">Id Number</label>
-        <input type="number" id="uniqueId" placeholder="Fill you Id here" required>
         <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
         <label for="age">Age</label>
-        <input type="number" id="age" placeholder="Age" required>
+        <input type="number" id="age" name="age" placeholder="Age" required>
         <label for="">Designation:- </label>
         <input type="radio" name="Designation" value="employee" id="employee">
         <label for="employee">Employee</label>
         <input type="radio" name="Designation" value="student" id="student">
         <label for="student">Student</label>
-        <select name="" id="Priority" required>
+        <select name="priority" id="Priority" required>
             <option value="">Select the Priority</option>
             <option value="p0">p0</option>
             <option value="p1">p1</option>
             <option value="p2">p2</option>
             <option value="p3">p3</option>
         </select>
-        <select name="" id="Vaccine" required>
+        <select name="vaccine" id="Vaccine" required>
             <option value="">Select which vaccine you prefer</option>
             <option value="Covishield">Covishield</option>
             <option value="Covaxin">Covaxin</option>

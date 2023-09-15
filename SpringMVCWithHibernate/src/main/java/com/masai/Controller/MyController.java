@@ -43,7 +43,7 @@ public class MyController {
 	}
 	
 	
-	//@GetMapping("/register")
+	@GetMapping("/register")
 	public String registerUserHandler(Model model) {
 		Users user = new Users();
 		model.addAttribute("user", user);
