@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.masai.Entities.Users;
 import com.masai.Repository.UserDao;
@@ -50,5 +52,16 @@ public class MyController {
 		return "register";
 	}
 	
+	
+	
+	@PostMapping("/registerUser")
+	public String submitUserCredintial(@ModelAttribute("user") Users user, Model model) {
+		if(user != null) {
+			userDao.registerUser(user);
+			model.addAttribute("name", user.getName());
+		}
+		model.asMap().remove("user");
+		return "register";
+	}
 	
 }	

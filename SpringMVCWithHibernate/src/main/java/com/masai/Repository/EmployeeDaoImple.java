@@ -40,4 +40,18 @@ public class EmployeeDaoImple implements UserDao{
 		return users;
 	}
 
+	@Override
+	public Users findUserByEmail(String email) {
+		EntityManager em = SFUtils.getConnection();
+		
+		TypedQuery<Users> query = em.createQuery("SELECT u FROM Users u WHERE u.email = :email", Users.class);
+	    query.setParameter("email", email);
+		
+		Users user = query.getSingleResult();
+		return user;
+	}
+	
+	
+	
+
 }

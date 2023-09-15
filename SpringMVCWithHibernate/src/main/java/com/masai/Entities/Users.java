@@ -31,5 +31,7 @@ public class Users {
 	private String email;
 	private String designation;
 	private String address;
+	private String priority;
+	private String vaccine;
 	
 }
