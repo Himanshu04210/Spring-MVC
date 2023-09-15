@@ -42,4 +42,14 @@ public class MyController {
 		return "checkDetail";
 	}
 	
+	
+	//@GetMapping("/register")
+	public String registerUserHandler(/*Model model, Employees employee*/) {
+//		employeeDao.registerEmployee(employee);
+//		model.addAttribute("employeeName", employee.getName());
+		System.out.println("register");
+		return "register";
+	}
+	
+	
 }	

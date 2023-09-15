@@ -3,7 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<!-- <meta charset="ISO-8859-1"> -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home page</title>
 </head>
 <style>
@@ -71,14 +74,14 @@
     <div id="navbar">
         <h1>Masai Vaccination</h1>
         <div>
-            <p><a href="Register">Rigister</a></p>
-            <p><a href="Dashboard">Dashboard</a></p>
-            <p><a href="Vaccinated">Vaccinated</a></p>
+            <p><a href="register.jsp">Rigister</a></p>
+            <p><a href="Dashboard.jsp">Dashboard</a></p>
+            <p><a href="Vaccinated.jsp">Vaccinated</a></p>
         </div>
     </div>
     <div id="header">
         <div>
-            <h1>Historic & Unparalleled Achievement ! India’s Glorious Journey of</h1>
+            <h1>Historic &amp; Unparalleled Achievement ! India's Glorious Journey of</h1>
             <div>
                 <img src="https://www.cowin.gov.in/assets/images/verified.svg" alt="marked">
                 <h1>200 CRORE VACCINATIONS</h1>
