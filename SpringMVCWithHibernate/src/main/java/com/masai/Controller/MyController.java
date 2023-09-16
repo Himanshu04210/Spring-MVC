@@ -1,6 +1,5 @@
 package com.masai.Controller;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,6 @@ public class MyController {
 	
 	@GetMapping("/")
 	public String welcome() {
-		System.out.println("working fine....");
 		return "index";
 	}
 	

@@ -84,6 +84,8 @@
             border-radius: 7px;
         }
     </style>
+    
+    <!-- <script src="dashboard.js"></script> -->
 <body>
     <div id="navbar">
         <a href="./">
@@ -92,7 +94,7 @@
         <div>
             <p><a href="register">Rigister</a></p>
             <p><a href="dashboard">Dashboard</a></p>
-            <p><a href="vaccinated">Vaccinated</a></p>
+            <p><a href="<%= request.getContextPath() %>/WEB-INF/view/vaccine.jsp">Vaccinated</a></p>
         </div>
     </div>
     <select name="" id="filterByVaccine">
@@ -113,7 +115,7 @@
         <option value="p2">p2</option>
         <option value="p3">p3</option>
     </select>
-    
+    <button onclick="hello()">click me</button>
     <table border 1>
         <thead>
             <tr>
@@ -156,6 +158,5 @@
 			</c:forEach>
         </tbody>
     </table>
-    
 </body>
 </html>
