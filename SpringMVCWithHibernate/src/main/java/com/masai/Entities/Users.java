@@ -1,10 +1,12 @@
 package com.masai.Entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import jakarta.annotation.Nonnull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -28,6 +30,9 @@ public class Users {
 	
 	private String name;
 	private int age;
+	
+	@Column(unique = true)
+	@Nonnull
 	private String email;
 	private String designation;
 	private String address;

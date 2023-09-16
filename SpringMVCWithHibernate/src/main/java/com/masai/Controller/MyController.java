@@ -25,17 +25,7 @@ public class MyController {
 	
 	@GetMapping("/")
 	public String welcome() {
-		
-		/*
-		Users user = Users.builder()
-					.name("Susheel")
-					.address("banki")
-					.salary("50000")
-					.build();
-		
-		userDao.registerUser(user);
-		*/
-		
+		System.out.println("working fine....");
 		return "index";
 	}
 	
@@ -59,22 +49,25 @@ public class MyController {
 	
 	
 	@PostMapping("/registerUser")
-	public String submitUserCredintial(@ModelAttribute("user") Users user, Model model, HttpServletResponse response) throws IOException {
-		try {
-			Users existingUser = userDao.findUserByEmail(user.getEmail());
-			if(existingUser == null) userDao.registerUser(user);
-			
-		}
-		catch(Exception ex) {
-			
-		}
+	public void submitUserCredintial(@ModelAttribute("user") Users user, Model model, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		if(userDao.findUserByEmail(user.getEmail()) == null)
+			userDao.registerUser(user);
 		
-		List<Users> users = userDao.getAllUsers();
-		System.out.println(users);
-		model.addAttribute("userList", users);
-		//response.sendRedirect("dashboard.jsp");
-		return "dashboard";
+		
+		String contextPath = request.getContextPath();
+		
+		
+		response.sendRedirect(contextPath + "/dashboard");
+		
 
+	}
+	
+	
+	@GetMapping("/dashboard")
+	public String dashboardHandler(Model model) {
+		List<Users> users = userDao.getAllUsers();
+		model.addAttribute("userList", users);
+		return "dashboard";
 	}
 	
 	

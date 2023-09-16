@@ -86,13 +86,13 @@
     </style>
 <body>
     <div id="navbar">
-        <a href="">
+        <a href="./">
             <h1>Masai Vaccination</h1>
         </a>
         <div>
-            <p><a href="./Register.html">Rigister</a></p>
-            <p><a href="./Dashboard.html">Dashboard</a></p>
-            <p><a href="./Vaccinated.html">Vaccinated</a></p>
+            <p><a href="register">Rigister</a></p>
+            <p><a href="dashboard">Dashboard</a></p>
+            <p><a href="vaccinated">Vaccinated</a></p>
         </div>
     </div>
     <select name="" id="filterByVaccine">

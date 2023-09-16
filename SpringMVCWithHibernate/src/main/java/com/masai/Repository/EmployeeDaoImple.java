@@ -47,8 +47,23 @@ public class EmployeeDaoImple implements UserDao{
 		TypedQuery<Users> query = em.createQuery("SELECT u FROM Users u WHERE u.email = :email", Users.class);
 	    query.setParameter("email", email);
 		
-		Users user = query.getSingleResult();
-		return user;
+		
+		List<Users> userList = query.getResultList();
+		SFUtils.closeConnection(em);
+		
+		if (userList.isEmpty()) {
+		    // Handle the case when no user with the specified email is found
+		    return null; // Or throw an exception, return a default user, etc.
+		} else {
+		    // Handle the case when a user with the specified email is found
+		    return userList.get(0); // Return the first user found (assuming there should be only one)
+		}
+
+
+
+
+
+
 	}
 	
 	

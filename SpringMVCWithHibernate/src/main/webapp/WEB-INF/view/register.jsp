@@ -99,11 +99,11 @@
 <body>
 	
 	<div id="navbar">
-       <h1> <a href="">Masai Vaccination</a></h1>
+       <a href="./"><h1> Masai Vaccination</h1></a>
         <div>
             <p><a href="register">Rigister</a></p>
-            <p><a href="Dashboard">Dashboard</a></p>
-            <p><a href="Vaccinated">Vaccinated</a></p>
+            <p><a href="dashboard">Dashboard</a></p>
+            <p><a href="vaccinated">Vaccinated</a></p>
         </div>
     </div>
 	<h1 id="heading">Fill your cridentials</h1>
