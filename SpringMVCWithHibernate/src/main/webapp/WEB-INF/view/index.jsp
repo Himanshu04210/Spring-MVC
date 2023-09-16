@@ -75,8 +75,8 @@
         <h1>Masai Vaccination</h1>
         <div>
             <p><a href="register">Rigister</a></p>
-            <p><a href="Dashboard">Dashboard</a></p>
-            <p><a href="Vaccinated">Vaccinated</a></p>
+            <p><a href="dashboard">Dashboard</a></p>
+            <p><a href="vaccinated">Vaccinated</a></p>
         </div>
     </div>
     <div id="header">

@@ -1,5 +1,6 @@
 package com.masai.Controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.masai.Entities.Users;
 import com.masai.Repository.UserDao;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
 @Controller
 public class MyController {
 
@@ -23,13 +27,13 @@ public class MyController {
 	public String welcome() {
 		
 		/*
-		Employees employee = Employees.builder()
-								.name("Susheel")
-								.address("banki")
-								.salary("50000")
-								.build();
+		Users user = Users.builder()
+					.name("Susheel")
+					.address("banki")
+					.salary("50000")
+					.build();
 		
-		employeeDao.registerEmployee(employee);
+		userDao.registerUser(user);
 		*/
 		
 		return "index";
@@ -55,13 +59,24 @@ public class MyController {
 	
 	
 	@PostMapping("/registerUser")
-	public String submitUserCredintial(@ModelAttribute("user") Users user, Model model) {
-		if(user != null) {
-			userDao.registerUser(user);
-			model.addAttribute("name", user.getName());
+	public String submitUserCredintial(@ModelAttribute("user") Users user, Model model, HttpServletResponse response) throws IOException {
+		try {
+			Users existingUser = userDao.findUserByEmail(user.getEmail());
+			if(existingUser == null) userDao.registerUser(user);
+			
 		}
-		model.asMap().remove("user");
-		return "register";
+		catch(Exception ex) {
+			
+		}
+		
+		List<Users> users = userDao.getAllUsers();
+		System.out.println(users);
+		model.addAttribute("userList", users);
+		//response.sendRedirect("dashboard.jsp");
+		return "dashboard";
+
 	}
+	
+	
 	
 }	
