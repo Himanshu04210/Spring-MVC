@@ -116,12 +116,13 @@
         <option value="p3">p3</option>
     </select>
     <button onclick="hello()">click me</button>
-    <table border 1>
+    <table border=1>
         <thead>
             <tr>
             	<th>Id</th>
                 <th>Name</th>
                 <th>Age</th>
+                <th>Email</th>
                 <th>Designation</th>
                 <th>Priority</th>
                 <th>Vaccine</th>
@@ -136,6 +137,7 @@
 					<td>${user.getId() }</td>
 					<td>${user.getName() }</td>
 					<td>${user.getAge() }</td>
+					<td>${user.getEmail() }</td>
 					<td>${user.getDesignation() }</td>
 					<td>${user.getPriority() }</td>
 					<td>${user.getVaccine() }</td>
@@ -160,5 +162,16 @@
     </table>
     
 </body>
-<script src="<%request.getContextPath(); %>/dashboard.js"></script>
+
+
+<script>
+	function hello() {
+        // Construct the URL for the target page
+        var targetUrl = '/SpringMVCWithHibernate/WEB-INF/view/vaccine.jsp';
+		console.log(targetUrl);
+        // Perform the redirect
+        window.location.href = targetUrl;
+	}
+
+</script>
 </html>
