@@ -85,7 +85,7 @@
         }
     </style>
     
-    <!-- <script src="dashboard.js"></script> -->
+    
 <body>
     <div id="navbar">
         <a href="./">
@@ -158,5 +158,7 @@
 			</c:forEach>
         </tbody>
     </table>
+    
 </body>
+<script src="<%request.getContextPath(); %>/dashboard.js"></script>
 </html>
