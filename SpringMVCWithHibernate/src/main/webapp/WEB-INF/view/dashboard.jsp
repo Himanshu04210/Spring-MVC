@@ -167,11 +167,12 @@
                 </c:set>
                 
                  -->
+                 
                  <% 
                 Users user = (Users)pageContext.getAttribute("user");
                 Gson gson = new Gson();
                 String json = gson.toJson(user);
-                System.out.println(json);
+                //System.out.println(json);
             	%>
             
                 <%-- <td class="vaccinate" data-user='${userJson}' onclick="vaccinateUser(this, <%= randomValue %>)">Vaccinate</td> --%>
