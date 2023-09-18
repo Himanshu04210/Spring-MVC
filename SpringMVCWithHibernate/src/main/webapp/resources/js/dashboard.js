@@ -55,11 +55,9 @@ function check(user, OTP) {
 
 */
 
-function vaccinateUser(userData, randomValue) {
-    // Parse the JSON-encoded data back into a JavaScript object
-    var user = JSON.parse(userData);
-    console.log(userData);
-    console.log(user[2]);
+function vaccinateUser(element, randomValue) {
+    var userJson = element.getAttribute('data-user');
+    var user = JSON.parse(userJson);
     
     // Now you can access the properties of the user object
     console.log("ID:", user.id);
@@ -70,6 +68,7 @@ function vaccinateUser(userData, randomValue) {
     // Access randomValue as well
     console.log("Random Value:", randomValue);
 }
+
 
 function deleteUser(userId) {
     // Implement the delete logic here

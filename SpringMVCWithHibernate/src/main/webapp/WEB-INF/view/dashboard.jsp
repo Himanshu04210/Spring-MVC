@@ -4,6 +4,9 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%> 
 <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page import="com.google.gson.Gson" %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -94,7 +97,7 @@
         <div>
             <p><a href="register">Rigister</a></p>
             <p><a href="dashboard">Dashboard</a></p>
-            <p><a href="<%= request.getContextPath() %>/WEB-INF/view/vaccine.jsp">Vaccinated</a></p>
+            <p><a href="#">Vaccinated</a></p>
         </div>
     </div>
     <select name="" id="filterByVaccine">
@@ -150,8 +153,25 @@
 							out.println(randomValue);
 						%>
 					</td>
-					<td class="vaccinate" onclick="vaccinateUser('${user}', <%= randomValue %>)">Vaccinate</td>
-					<td class="delete" onclick="clickButton()">Delete</td>
+					<!-- 
+					<c:set var="userJson">
+                    {
+                        "id": "${user.getId()}",
+                        "name": "${user.getName()}",
+                        "age": "${user.getAge()}",
+                        "email": "${user.getEmail()}",
+                        "designation": "${user.getDesignation()}",
+                        "priority": "${user.getPriority()}",
+                        "vaccine": "${user.getVaccine()}"
+                    }
+                </c:set>
+                
+                 -->
+                 
+                <%System.out.println(%>${user.getName()}<%  )%>
+                
+                <td class="vaccinate" data-user='${userJson}' onclick="vaccinateUser(this, <%= randomValue %>)">Vaccinate</td>
+                <td class="delete" onclick="clickButton()">Delete</td>
 					
 				</tr>
 			
