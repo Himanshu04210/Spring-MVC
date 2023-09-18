@@ -1,7 +1,7 @@
 
 
 console.log("working.....")
-
+/*
 function hello() {
 	let vaccinate = document.getElementsByClassName("vaccinate");
 	//vaccinate.innerHTML = "do vaccine";
@@ -11,7 +11,7 @@ function hello() {
 	}
 	
 	console.log(vaccinate);
-}
+}*/
 
 
 function clickButton() {

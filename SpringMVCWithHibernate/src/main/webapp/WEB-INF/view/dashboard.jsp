@@ -119,7 +119,6 @@
         <option value="p2">p2</option>
         <option value="p3">p3</option>
     </select>
-    <button onclick="hello()">click me</button>
     <table border=1>
         <thead>
             <tr>
@@ -184,6 +183,8 @@
 			</c:forEach>
         </tbody>
     </table>
+    
+  
     
 </body>
 
