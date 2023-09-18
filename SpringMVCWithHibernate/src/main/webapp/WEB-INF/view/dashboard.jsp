@@ -1,3 +1,4 @@
+<%@page import="com.masai.Entities.Users"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
@@ -167,14 +168,19 @@
                 </c:set>
                 
                  -->
-                 
-                <%System.out.println(%>${user.getName()}<%  )%>
-                
-                <td class="vaccinate" data-user='${userJson}' onclick="vaccinateUser(this, <%= randomValue %>)">Vaccinate</td>
+                 <% 
+                Users user = (Users)pageContext.getAttribute("user");
+                Gson gson = new Gson();
+                String json = gson.toJson(user);
+                System.out.println(json);
+            	%>
+            
+                <%-- <td class="vaccinate" data-user='${userJson}' onclick="vaccinateUser(this, <%= randomValue %>)">Vaccinate</td> --%>
+                <td class="vaccinate"  onclick='vaccinateUser(<%=json %>, <%= randomValue %>)'>Vaccinate</td>
                 <td class="delete" onclick="clickButton()">Delete</td>
 					
 				</tr>
-			
+			 
 			</c:forEach>
         </tbody>
     </table>

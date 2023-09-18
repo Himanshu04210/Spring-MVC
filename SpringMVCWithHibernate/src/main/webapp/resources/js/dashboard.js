@@ -24,49 +24,35 @@ function clickButton() {
 function check(user, OTP) {
 	
 
-	console.log(user, OTP);
-                
-                /*
-                let h = prompt(`${user.getName()} put your OTP here!`)
-                //console.log(OTP.innerText)
-                //console.log(h)
-                if (OTP == h) {
-                    let promise = new Promise((resolve, reject) => {
-
-                        setTimeout(() => {
-                            alert(`${user.getName()} Added to Queue`)
-                        }, 0)
-
-                        setTimeout(() => {
-                            alert(`Vaccinating ${user.getVaccine()}`)
-                        }, 5000)
-
-                        setTimeout(() => {
-                            alert(`${user.getName()} Vaccinated`)
-                        }, 10000)
-                        
-                    })
-                }
-                else if (h) {
-                    alert("OTP is not valid. Please enter valid OTP")
-                }
                 
 }
 
 */
 
-function vaccinateUser(element, randomValue) {
-    var userJson = element.getAttribute('data-user');
-    var user = JSON.parse(userJson);
+function vaccinateUser(user, OTP) {
     
-    // Now you can access the properties of the user object
-    console.log("ID:", user.id);
-    console.log("Name:", user.name);
-    console.log("Age:", user.age);
-    // ... and so on
+                
+    let h = prompt(`${user.name} put your OTP here!`);
+    if (OTP == h) {
+        let promise = new Promise((resolve, reject) => {
 
-    // Access randomValue as well
-    console.log("Random Value:", randomValue);
+            setTimeout(() => {
+                alert(`${user.name} Added to Queue`)
+            }, 0)
+
+            setTimeout(() => {
+                alert(`Vaccinating ${user.vaccine}`)
+            }, 5000)
+
+            setTimeout(() => {
+                alert(`${user.name} Vaccinated`)
+            }, 10000)
+            
+        })
+    }
+    else if (h) {
+        alert("OTP is not valid. Please enter valid OTP")
+    }
 }
 
 
