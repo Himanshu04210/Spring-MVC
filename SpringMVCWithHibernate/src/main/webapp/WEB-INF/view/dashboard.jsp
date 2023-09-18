@@ -56,23 +56,23 @@
             padding: 5px;
         }
 
-        #delete {
+        .delete {
             background-color: rgb(231, 77, 77);
             color: white;
             cursor: pointer;
         }
 
-        #delete:hover {
+        .delete:hover {
             background-color: red;
         }
 
-        #vaccinate {
+        .vaccinate {
             background-color: rgb(71, 170, 71);
             color: white;
             cursor: pointer;
         }
 
-        #vaccinate:hover {
+        .vaccinate:hover {
             background-color: green;
         }
 
@@ -85,7 +85,7 @@
         }
     </style>
     
-    
+    <script src="<%= request.getContextPath()%>/resources/js/dashboard.js"></script>
 <body>
     <div id="navbar">
         <a href="./">
@@ -128,7 +128,7 @@
                 <th>Vaccine</th>
                 <th>OTP</th>
                 <th>Vaccinate</th>
-                <th>Delete</th>
+                <th >Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -142,7 +142,6 @@
 					<td>${user.getPriority() }</td>
 					<td>${user.getVaccine() }</td>
 					<td>
-					
 						<%
 							// Generate a random 4-digit number
 					        int min = 1000; // Minimum 4-digit number (inclusive)
@@ -150,10 +149,9 @@
 					        int randomValue = min + (int)(Math.random() * ((max - min) + 1));
 							out.println(randomValue);
 						%>
-					
 					</td>
-					<td id="vaccinate">Vaccinate</td>
-					<td id="delete">Delete</td>
+					<td class="vaccinate" onclick="vaccinateUser('${user}', <%= randomValue %>)">Vaccinate</td>
+					<td class="delete" onclick="clickButton()">Delete</td>
 					
 				</tr>
 			
@@ -164,14 +162,4 @@
 </body>
 
 
-<script>
-	function hello() {
-        // Construct the URL for the target page
-        var targetUrl = '/SpringMVCWithHibernate/WEB-INF/view/vaccine.jsp';
-		console.log(targetUrl);
-        // Perform the redirect
-        window.location.href = targetUrl;
-	}
-
-</script>
 </html>
