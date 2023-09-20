@@ -12,7 +12,7 @@ import com.masai.Utils.SFUtils;
 
 
 @Repository
-public class EmployeeDaoImple implements UserDao{
+public class UserDaoImple implements UserDao{
 
 	
 	@Override
