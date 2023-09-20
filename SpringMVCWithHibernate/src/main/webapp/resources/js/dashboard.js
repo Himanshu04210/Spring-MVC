@@ -14,20 +14,6 @@ function hello() {
 }*/
 
 
-function clickButton() {
-	console.log("delete")
-}
-
-
-
-/*
-function check(user, OTP) {
-	
-
-                
-}
-
-*/
 
 function vaccinateUser(user, OTP) {
     
