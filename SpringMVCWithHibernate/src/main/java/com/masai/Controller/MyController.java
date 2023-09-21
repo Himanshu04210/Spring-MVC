@@ -24,6 +24,7 @@ public class MyController {
 	
 	@GetMapping("/")
 	public String welcome() {
+		System.out.println("working....");
 		return "index";
 	}
 	
