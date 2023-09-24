@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.masai.Entities.Users;
 import com.masai.Repository.UserDao;
@@ -67,6 +68,15 @@ public class MyController {
 		List<Users> users = userDao.getAllUsers();
 		model.addAttribute("userList", users);
 		return "dashboard";
+	}
+	
+	@GetMapping("/delete")
+	public String deleteUserHandler(@RequestParam int id) {
+		
+		
+		userDao.deleteUserById(id);
+		
+		return "redirect:/dashboard";
 	}
 	
 	

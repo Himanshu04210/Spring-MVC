@@ -3,6 +3,7 @@ package com.masai.Repository;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
@@ -57,6 +58,35 @@ public class UserDaoImple implements UserDao{
 		    return userList.get(0); // Return the first user found (assuming there should be only one)
 		}
 
+	}
+
+	@Override
+	public void deleteUserById(int userId) {
+		
+		EntityManager em = Persistence.createEntityManagerFactory("EmployeesUnit").createEntityManager();
+		
+		try {
+			em = SFUtils.getConnection();
+			Users user = em.find(Users.class, userId);
+			
+			if(user != null) {
+				em.getTransaction().begin();
+				System.out.println(user);
+				em.remove(user);
+				em.flush();
+				em.getTransaction().commit();
+
+			}
+		}
+		finally {
+			if (em != null && em.isOpen()) {
+		        em.close();
+		    }
+		}
+		
+		
+		
+		
 	}
 	
 	

@@ -69,6 +69,11 @@
         .delete:hover {
             background-color: red;
         }
+        
+        .delete>a{
+        	text-decoration: none;
+        	color: white;
+        }
 
         .vaccinate {
             background-color: rgb(71, 170, 71);
@@ -177,7 +182,7 @@
             
                 <%-- <td class="vaccinate" data-user='${userJson}' onclick="vaccinateUser(this, <%= randomValue %>)">Vaccinate</td> --%>
                 <td class="vaccinate"  onclick='vaccinateUser(<%=json %>, <%= randomValue %>)'>Vaccinate</td>
-                <td class="delete" onclick="clickButton()">Delete</td>
+                <td class="delete"><a href="delete?id=${user.getId()}">Delete</a></td>
 					
 				</tr>
 			 
