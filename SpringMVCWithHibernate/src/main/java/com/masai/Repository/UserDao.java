@@ -12,4 +12,5 @@ public interface UserDao {
 	public Users deleteUserById(int userId);
 	
 	public VaccinatedUsers addVaccinatedUser(VaccinatedUsers vaccinatedUsers);
+	public List<VaccinatedUsers> getAllVaccinatedUsers();
 }

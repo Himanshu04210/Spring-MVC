@@ -96,6 +96,21 @@ public class UserDaoImple implements UserDao{
 		em.getTransaction().begin();
 		em.persist(vaccinatedUsers);
 		em.getTransaction().commit();
+		SFUtils.closeConnection(em);
+		return vaccinatedUsers;
+		
+	}
+
+	@Override
+	public List<VaccinatedUsers> getAllVaccinatedUsers() {
+		EntityManager em = SFUtils.getConnection();
+		
+		System.out.println("vaccinated Users");
+		
+		TypedQuery<VaccinatedUsers> query = em.createQuery("SELECT v FROM VaccinatedUsers v", VaccinatedUsers.class);
+		List<VaccinatedUsers> vaccinatedUsers = query.getResultList();
+		SFUtils.closeConnection(em);
+		if(vaccinatedUsers.isEmpty()) return null;
 		
 		return vaccinatedUsers;
 		

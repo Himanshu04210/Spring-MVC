@@ -100,9 +100,16 @@ public class MyController {
 			userDao.addVaccinatedUser(vaccinatedUsers);
 		}
 		
-		return "vaccinatedPage";
+		return "redirect:/vaccinatedUsers";
 	}
 	
+	
+	@GetMapping("/vaccinatedUsers")
+	public String getAllVaccinatedUsers(Model model) {
+		List<VaccinatedUsers> vaccinatedUsers = userDao.getAllVaccinatedUsers();
+		model.addAttribute("vaccinatedUser", vaccinatedUsers);
+		return "vaccinatedPage";
+	}
 	
 	
 }	
