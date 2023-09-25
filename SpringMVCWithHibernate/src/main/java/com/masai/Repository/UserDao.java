@@ -8,5 +8,7 @@ public interface UserDao {
 	public Users registerUser(Users user);
 	public List<Users> getAllUsers();
 	public Users findUserByEmail(String email);
-	public void deleteUserById(int userId);
+	public Users deleteUserById(int userId);
+	
+	public Users addVaccinatedUser(Users user);
 }

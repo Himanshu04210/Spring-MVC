@@ -51,23 +51,21 @@ public class UserDaoImple implements UserDao{
 		SFUtils.closeConnection(em);
 		
 		if (userList.isEmpty()) {
-		    // Handle the case when no user with the specified email is found
-		    return null; // Or throw an exception, return a default user, etc.
+			return null; 
 		} else {
-		    // Handle the case when a user with the specified email is found
-		    return userList.get(0); // Return the first user found (assuming there should be only one)
+		    return userList.get(0);
 		}
 
 	}
 
 	@Override
-	public void deleteUserById(int userId) {
+	public Users deleteUserById(int userId) {
 		
 		EntityManager em = Persistence.createEntityManagerFactory("EmployeesUnit").createEntityManager();
-		
+		Users user = null;
 		try {
 			em = SFUtils.getConnection();
-			Users user = em.find(Users.class, userId);
+			user = em.find(Users.class, userId);
 			
 			if(user != null) {
 				em.getTransaction().begin();
@@ -82,9 +80,17 @@ public class UserDaoImple implements UserDao{
 			if (em != null && em.isOpen()) {
 		        em.close();
 		    }
+	
 		}
+		return user;
 		
 		
+		
+	}
+
+	@Override
+	public Users addVaccinatedUser(Users user) {
+		EntityManager em = SFUtils.getConnection();
 		
 		
 	}

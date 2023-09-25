@@ -57,7 +57,7 @@ public class MyController {
 		String contextPath = request.getContextPath();
 		
 		
-		response.sendRedirect(contextPath + "/dashboard");
+		response.sendRedirect(contextPath + "/register");
 		
 
 	}
@@ -79,6 +79,18 @@ public class MyController {
 		return "redirect:/dashboard";
 	}
 	
+	@GetMapping("/vaccinatedUser")
+	public String vaccinatedUser(@RequestParam int id) {
+		System.out.println("vaccinate user is working " +id);
+		
+		Users user = userDao.deleteUserById(id);
+		
+		if(user != null) {
+			
+		}
+		
+		return "redirect:/dashboard";
+	}
 	
 	
 	

@@ -31,7 +31,10 @@ function vaccinateUser(user, OTP) {
             }, 5000)
 
             setTimeout(() => {
+				
                 alert(`${user.name} Vaccinated`)
+                window.location.href = `vaccinatedUser?id=${user.id}`
+                console.log("register page");
             }, 10000)
             
         })
