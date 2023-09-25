@@ -104,9 +104,6 @@ public class UserDaoImple implements UserDao{
 	@Override
 	public List<VaccinatedUsers> getAllVaccinatedUsers() {
 		EntityManager em = SFUtils.getConnection();
-		
-		System.out.println("vaccinated Users");
-		
 		TypedQuery<VaccinatedUsers> query = em.createQuery("SELECT v FROM VaccinatedUsers v", VaccinatedUsers.class);
 		List<VaccinatedUsers> vaccinatedUsers = query.getResultList();
 		SFUtils.closeConnection(em);

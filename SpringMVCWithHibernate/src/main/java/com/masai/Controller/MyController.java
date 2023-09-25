@@ -89,6 +89,7 @@ public class MyController {
 		if(user != null) {
 			VaccinatedUsers vaccinatedUsers = VaccinatedUsers.builder()
 					.id(id)
+					.name(user.getName())
 					.age(user.getAge())
 					.address(user.getAddress())
 					.designation(user.getDesignation())
