@@ -100,7 +100,7 @@
         <a href="./">
             <h1>Masai Vaccination</h1>
         </a>
-        <div>
+    	<div>
             <p><a href="register">Rigister</a></p>
             <p><a href="dashboard">Dashboard</a></p>
             <p><a href="vaccinatedUsers">Vaccinated</a></p>
@@ -173,11 +173,10 @@
                 
                  -->
                  
-                 <% 
+                <% 
 	                Users user = (Users)pageContext.getAttribute("user");
 	                Gson gson = new Gson();
 	                String json = gson.toJson(user);
-	                //System.out.println(json);
             	%>
             
                 <%-- <td class="vaccinate" data-user='${userJson}' onclick="vaccinateUser(this, <%= randomValue %>)">Vaccinate</td> --%>
