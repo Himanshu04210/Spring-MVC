@@ -9,6 +9,7 @@ import javax.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 
 import com.masai.Entities.Users;
+import com.masai.Entities.VaccinatedUsers;
 import com.masai.Utils.SFUtils;
 
 
@@ -89,9 +90,14 @@ public class UserDaoImple implements UserDao{
 	}
 
 	@Override
-	public Users addVaccinatedUser(Users user) {
+	public VaccinatedUsers addVaccinatedUser(VaccinatedUsers vaccinatedUsers) {
 		EntityManager em = SFUtils.getConnection();
 		
+		em.getTransaction().begin();
+		em.persist(vaccinatedUsers);
+		em.getTransaction().commit();
+		
+		return vaccinatedUsers;
 		
 	}
 	

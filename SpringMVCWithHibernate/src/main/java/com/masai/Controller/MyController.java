@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.masai.Entities.Users;
+import com.masai.Entities.VaccinatedUsers;
 import com.masai.Repository.UserDao;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -86,10 +87,20 @@ public class MyController {
 		Users user = userDao.deleteUserById(id);
 		
 		if(user != null) {
+			VaccinatedUsers vaccinatedUsers = VaccinatedUsers.builder()
+					.id(id)
+					.age(user.getAge())
+					.address(user.getAddress())
+					.designation(user.getDesignation())
+					.email(user.getEmail())
+					.priority(user.getPriority())
+					.vaccine(user.getVaccine())
+					.build();
 			
+			userDao.addVaccinatedUser(vaccinatedUsers);
 		}
 		
-		return "redirect:/dashboard";
+		return "vaccinatedPage";
 	}
 	
 	

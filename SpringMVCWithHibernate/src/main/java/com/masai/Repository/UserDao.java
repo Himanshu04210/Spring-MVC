@@ -3,6 +3,7 @@ package com.masai.Repository;
 import java.util.List;
 
 import com.masai.Entities.Users;
+import com.masai.Entities.VaccinatedUsers;
 
 public interface UserDao {
 	public Users registerUser(Users user);
@@ -10,5 +11,5 @@ public interface UserDao {
 	public Users findUserByEmail(String email);
 	public Users deleteUserById(int userId);
 	
-	public Users addVaccinatedUser(Users user);
+	public VaccinatedUsers addVaccinatedUser(VaccinatedUsers vaccinatedUsers);
 }
