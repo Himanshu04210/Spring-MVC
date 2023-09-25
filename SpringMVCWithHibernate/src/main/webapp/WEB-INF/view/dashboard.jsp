@@ -103,7 +103,7 @@
         <div>
             <p><a href="register">Rigister</a></p>
             <p><a href="dashboard">Dashboard</a></p>
-            <p><a href="#">Vaccinated</a></p>
+            <p><a href="vaccinatedUsers">Vaccinated</a></p>
         </div>
     </div>
     <select name="" id="filterByVaccine">
@@ -188,11 +188,6 @@
 			 
 			</c:forEach>
         </tbody>
-    </table>
-    
-  
-    
+    </table>   
 </body>
-
-
 </html>

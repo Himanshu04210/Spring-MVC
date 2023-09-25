@@ -103,7 +103,7 @@
         <div>
             <p><a href="register">Rigister</a></p>
             <p><a href="dashboard">Dashboard</a></p>
-            <p><a href="vaccinated">Vaccinated</a></p>
+            <p><a href="vaccinatedUsers">Vaccinated</a></p>
         </div>
     </div>
 	<h1 id="heading">Fill your cridentials</h1>

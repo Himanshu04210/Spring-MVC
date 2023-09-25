@@ -62,7 +62,8 @@ public class UserDaoImple implements UserDao{
 	@Override
 	public Users deleteUserById(int userId) {
 		
-		EntityManager em = Persistence.createEntityManagerFactory("EmployeesUnit").createEntityManager();
+		EntityManager em = SFUtils.getConnection();
+		
 		Users user = null;
 		try {
 			em = SFUtils.getConnection();

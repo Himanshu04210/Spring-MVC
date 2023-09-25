@@ -73,10 +73,7 @@ public class MyController {
 	
 	@GetMapping("/delete")
 	public String deleteUserHandler(@RequestParam int id) {
-		
-		
 		userDao.deleteUserById(id);
-		
 		return "redirect:/dashboard";
 	}
 	
